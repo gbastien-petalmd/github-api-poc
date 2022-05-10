@@ -22,6 +22,9 @@ import { ReposListComponent } from './components/repos-list/repos-list.component
 import { UsersListContainerComponent } from './containers/users-list-container/users-list-container.component';
 import { UserItemContainerComponent } from './containers/user-item-container/user-item-container.component';
 import { RepositoriesComponent } from './pages/repositories/repositories.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
+import { BlankStateComponent } from './components/blank-state/blank-state.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,7 @@ import { RepositoriesComponent } from './pages/repositories/repositories.compone
     AvatarComponent,
     ReposListComponent,
     RepositoriesComponent,
+    BlankStateComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +54,8 @@ import { RepositoriesComponent } from './pages/repositories/repositories.compone
     MatDividerModule,
     MatCardModule,
     MatButtonModule,
+    GraphQLModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

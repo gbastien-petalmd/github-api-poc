@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { RepositoriesFacade } from 'src/app/facades/repositories.facade';
 import { Repository } from 'src/app/models/Repository.model';
 
 @Component({
@@ -7,15 +9,11 @@ import { Repository } from 'src/app/models/Repository.model';
   styleUrls: ['./last-repos-container.component.scss'],
 })
 export class LastReposContainerComponent implements OnInit {
-  repos: Repository[] = [];
+  repos: Observable<Repository[]>;
 
-  constructor() {}
+  constructor(private repositoriesFacade: RepositoriesFacade) {}
 
   ngOnInit(): void {
-    this.repos = [
-      { id: 1, name: 'something', url: 'https://www.google.ca' },
-      { id: 2, name: 'something else', url: 'https://www.google.ca' },
-      { id: 3, name: 'something else entirely', url: 'https://www.google.ca' },
-    ];
+    this.repos = this.repositoriesFacade.repositories();
   }
 }

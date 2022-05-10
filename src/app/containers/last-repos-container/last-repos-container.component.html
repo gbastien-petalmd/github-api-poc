@@ -1,9 +1,13 @@
 <mat-card>
   <mat-card-title>Last Repositories ⭐</mat-card-title>
   <mat-card-content>
-    <app-repos-list [repos]="repos"></app-repos-list>
+    <app-repos-list *ngIf="!!(repos | async); else blankstate" [repos]="repos | async"></app-repos-list>
   </mat-card-content>
   <mat-card-actions>
     <a mat-raised-button color="primary" [routerLink]="'repositories'">View more</a>
   </mat-card-actions>
 </mat-card>
+
+<ng-template #blankstate>
+  <app-blank-state></app-blank-state>
+</ng-template>
