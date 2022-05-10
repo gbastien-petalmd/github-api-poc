@@ -1,0 +1,25 @@
+:host {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(black, 0.2);
+  z-index: 2;
+
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .homepage-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-right: auto;
+  }
+  .logo {
+    width: 5rem;
+  }
+  .title {
+    margin: 0;
+  }
+}

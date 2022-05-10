@@ -1,0 +1,7 @@
+<!-- https://material.angular.io/components/list/overview#lists-with-icons -->
+<mat-nav-list>
+  <a mat-list-item [href]="repo.url" *ngFor="let repo of repos">
+    <p class="repo-name">{{ repo.name }}</p>
+    <mat-divider></mat-divider>
+  </a>
+</mat-nav-list>

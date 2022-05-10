@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>Our Lovely Users ❤️</mat-card-title>
+  <mat-card-content>
+    <div class="users-list">
+      <app-user-item-container *ngFor="let user of users"
+        [user]="user">
+      </app-user-item-container>
+    </div>
+  </mat-card-content>
+</mat-card>
