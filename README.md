@@ -2,6 +2,9 @@
 This POC was built to test using the Apollo Cache as a local state management in an Angular app, instead of using Ngrx.
 It was built **Angular 13**, **Angular Material**, **apollo-angular** and the **Github GraphQL Api**.
 
+<img width="1563" alt="image" src="https://user-images.githubusercontent.com/71276537/168487435-acf09fb5-d07a-4e0e-b7ed-f720217e3588.png">
+
+
 ## What was done
 * A list of the last five repositories of the [pasta-org Github organization](https://github.com/pasta-org), with a view more button leading to a list of All repositories, paginated with 15 items per page (pager not working yet).
 * A (very (very) simple) form to create a new repository (WIP for the update of the cache after the mutation to show the new item in the list)
